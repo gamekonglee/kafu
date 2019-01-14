@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:id="@+id/sceneFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/sceneBgIv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/diyContainerRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <!-- 筒灯 -->
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/left_menu"
+            android:layout_alignParentBottom="true"
+            android:background="#66000000" >
+
+            <ImageView
+                android:id="@+id/tongdengIv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tongdeng" />
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/left_menu"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="#aa7F7F7F"
+            android:gravity="center_vertical">
+
+            <RelativeLayout
+                android:id="@+id/otherRl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:background="#000000">
+
+                <!-- 返回 -->
+                <ImageView
+                    android:id="@+id/goBackBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="back"
+                    android:src="@mipmap/ic_diy_back" />
+
+                <!-- 6000K,4000K,3000K,关灯 -->
+                <ImageView
+                    android:id="@+id/sixthIv"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_below="@id/goBackBtn"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/white" />
+
+                <ImageView
+                    android:id="@+id/fourthIv"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_below="@id/sixthIv"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/yellowy" />
+
+                <ImageView
+                    android:id="@+id/thirdIv"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_below="@id/fourthIv"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/yellow" />
+
+                <ImageView
+                    android:id="@+id/open"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_below="@id/thirdIv"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/turnoff" />
+
+                <!-- 筒灯 -->
+                <TextView
+                    android:id="@+id/tongdengTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center"
+                    android:text="关闭筒灯"
+                    android:textSize="14sp"
+                    android:textColor="#fff"
+                    android:layout_below="@id/open" />
+
+                <!-- 灯槽 -->
+                <TextView
+                    android:id="@+id/turnOn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="关闭灯槽"
+                    android:textSize="14sp"
+                    android:textColor="#fff"
+                    android:layout_below="@id/tongdengTv" />
+
+                <!-- 亮度 -->
+                <ImageView
+                    android:id="@+id/lianduIv"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/turnOn"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/liangdu" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <!--亮度调节-->
+        <RelativeLayout
+            android:id="@+id/brigth_rl"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="150dp"
+            android:layout_marginRight="150dp"
+            android:visibility="visible"
+            android:layout_marginBottom="10dp" >
+            <LinearLayout
+                android:id="@+id/seekbar_ll"
+                android:layout_width="600dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/shape_corners_seekbar_active"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <SeekBar
+                    android:id="@+id/seekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:max="127"
+                    android:progress="63" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/pb"
+        style="@style/Base.Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="invisible" />
+
+</FrameLayout>

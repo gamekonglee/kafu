@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:id="@+id/sceneFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/sceneBgIv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/yiyuan01"
+            android:scaleType="fitXY" />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/diyContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/left_menu"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="#aa7F7F7F"
+            android:gravity="center_vertical">
+
+            <RelativeLayout
+                android:id="@+id/otherRl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:background="#000000">
+
+                <!-- 返回 -->
+                <ImageView
+                    android:id="@+id/btn_goback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:onClick="back"
+                    android:src="@mipmap/go_back" />
+
+                <!-- 首页 -->
+                <LinearLayout
+                    android:id="@+id/shouye"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/btn_goback"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/home_video" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="首 页"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+
+                <!-- 灯光参数 -->
+                <LinearLayout
+                    android:id="@+id/light_param"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/shouye"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@id/shouye"
+                        android:layout_marginTop="4dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/light_param" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="灯光参数"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+
+                <!-- 筒灯视频 -->
+                <LinearLayout
+                    android:id="@+id/light_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/light_param"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/light_video" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="筒灯视频"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+
+                <!-- 灯光模式 -->
+                <LinearLayout
+                    android:id="@+id/light_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/light_video"
+                    android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/light_video"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/light_mode" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="灯光模式"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <!-- 参数 -->
+        <TextView
+            android:id="@+id/parametv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="参数"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:layout_margin="15dp"
+            android:textSize="18dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="#66000000" />
+
+    </RelativeLayout>
+
+</FrameLayout>

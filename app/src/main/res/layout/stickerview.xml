@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cc.bocang.bocang.view.StickerView2
+    android:id="@+id/sv"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="160dp"
+    android:background="@color/transparent"
+    android:layout_height="190dp">
+<ImageView
+    android:id="@+id/iv_delete"
+    android:layout_alignParentRight="true"
+    android:src="@mipmap/icon_delete"
+    android:layout_width="40dp"
+    android:layout_height="40dp" />
+    <ImageView
+        android:id="@+id/iv_flip"
+        android:layout_alignParentBottom="true"
+        android:src="@mipmap/icon_flip"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+    <ImageView
+        android:id="@+id/iv_top"
+        android:src="@mipmap/icon_top_enable"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+
+    <ImageView
+        android:id="@+id/iv_resize"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/icon_resize"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+    <ImageView
+        android:id="@+id/iv_bitmap"
+        android:layout_centerInParent="true"
+        android:layout_width="150dp"
+        android:layout_height="220dp" />
+</cc.bocang.bocang.view.StickerView2>

@@ -1,0 +1,176 @@
+<com.lib.common.hxp.view.PullToRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/refresh_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/refresh_head" />
+    <!-- 支持所有实现Pullable接口的View -->
+
+    <com.lib.common.hxp.view.PullableScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.bigkoo.convenientbanner.ConvenientBanner
+                android:id="@+id/convenientBanner"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/gridViewRl"
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:layout_below="@id/convenientBanner">
+
+                <!-- 产品按照属性分类 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <!-- 智能灯光 -->
+                    <LinearLayout
+                        android:id="@+id/intelligent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@mipmap/intelligent_light"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:text="智能灯光"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <!-- 家居照明 -->
+                    <LinearLayout
+                        android:id="@+id/home"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@mipmap/home_light"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:text="家居照明"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <!-- 商业照明 -->
+                    <LinearLayout
+                        android:id="@+id/business"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@mipmap/business_light"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:text="商业照明"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <!-- 更多 -->
+                    <LinearLayout
+                        android:id="@+id/more"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@mipmap/more_light"
+                            android:layout_gravity="center" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:text="更多"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!--<TextView
+                android:id="@+id/tuijianTv"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/gridViewRl"
+                android:background="#d4d2d2"
+                android:gravity="center"
+                android:text="爆款推荐"
+                android:textColor="#888888"
+                android:textSize="17sp" />-->
+
+            <!--<com.lib.common.hxp.view.GridViewForScrollView
+                android:id="@+id/priductGridView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/tuijianTv"
+                android:background="#FFFFFF"
+                android:horizontalSpacing="15dp"
+                android:numColumns="2"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp"
+                android:verticalSpacing="15dp" />-->
+
+            <ImageView
+                android:id="@+id/iv_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:layout_below="@id/gridViewRl"/>
+        </RelativeLayout>
+    </com.lib.common.hxp.view.PullableScrollView>
+
+    <include layout="@layout/load_more" />
+
+</com.lib.common.hxp.view.PullToRefreshLayout>
